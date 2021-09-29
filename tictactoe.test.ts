@@ -23,13 +23,20 @@ test('Clicking the upper left square adds an X to the square', async () => {
 
     let button = await (await driver).findElement(By.id('cell-0'));
     await button.click();
-    
+
+    const myText = await button.getText()
+
+    expect(myText).toBe('X')
 });
 
 test('Clicking the upper right square adds an X to the square', async () => {
 
     let button = await (await driver).findElement(By.id('cell-2'));
     await button.click();
+
+    const myText = await button.getText()
+
+    expect(myText).toBe('X')
     
 });
 
@@ -37,5 +44,9 @@ test('Clicking the lower right square adds an X to the square', async () => {
 
     let button = await (await driver).findElement(By.id('cell-8'));
     await button.click();
+
+    const myText = await button.getText()
+
+    expect(myText).toBe('X')
     
 });
